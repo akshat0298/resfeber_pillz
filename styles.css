@@ -1,0 +1,448 @@
+body{
+ margin:0;
+ padding: 0;
+}
+.navbar{
+  background-color:#dce2e1; 
+}
+.navbar li{
+  margin: 15px 2vw;
+}
+.navbar ul{
+  position: relative;
+  margin-right: -15px;
+}
+.navi .dropdown-menu{
+  background: #dce2e1;
+  padding-right: 12px;
+  padding-left: 2px;
+}
+.navi .dropdown-item:hover{
+  box-shadow:-2px 2px 10px #060c21; 
+  background: #848787;
+  margin-left:1px;
+}
+.logo{
+  width:50px;
+  height:50px;
+}
+
+.logopic{
+  opacit: 0.8;
+  height: 70vh;
+  margin: 0;
+  padding: 0;
+}
+.over{
+  position: absolute;
+  top: 45vh;
+  left :35vw;
+  transform:rotate(-9.5deg);
+}
+/*-----------------------------------------------*/
+.sidebar{
+  position: absolute;
+  top: 60vh;
+  left: 0;
+  display: inline;
+  border:1px solid #fff;
+  padding:5px 1px 5px 5px;
+}
+.menu a{
+  display: block;
+}
+.sidebar div{
+  display: inline-block;
+  padding: 3px;
+}
+.menu span{
+  float: right;
+  right: -25px;
+}
+/*------------------------------------------------------cards---------------------------------------------*/
+
+.cards{
+  min-height: 100vh;
+}
+
+.cardscon{
+  height: 75vh;
+  background-color:#060c21; 
+  padding: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  box-shadow:-2px 2px 10px #6DFDF2,-5px -5px 10px #060c21,5px 5px 10px #060c21,2px -2px 10px #B59BF4;
+}
+.cardscon:hover{
+  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  transition: smooth;
+  
+}
+.card-body:hover{
+  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  transition: smooth;
+  
+}
+.vid{
+  position: relative;
+  margin-left: -1px;
+  width: 100%;
+  height: 125%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card-body{
+  margin-top: 10%;
+  border-radius:5px;
+}
+/*---------------------------------------------------video-------------------------------------------------------*/
+.hi-slide { position: relative; width: 75vw; height: 50vh; margin: 0 auto; }
+
+.hi-slide .hi-next ,.hi-slide .hi-prev 
+{ position: absolute;
+  top: 50%; 
+  width: 40px;
+  height: 40px; 
+  margin-top: -20px;     
+  border-radius: 50px; 
+
+
+  line-height: 40px;
+  text-align: center; 
+  cursor: pointer;
+  background-color: #848787; 
+  color: black;               
+  transition: all 0.6s;
+  font-size: 20px; 
+  font-weight: bold;
+}
+.hi-slide .hi-next:hover, 
+.hi-slide .hi-prev:hover 
+{
+  opacity: 1; 
+  background-color: #fff;  
+}
+
+.hi-slide .hi-prev { left: -60px; }
+
+.hi-slide .hi-prev::before { content: '<'; }
+.hi-slide .hi-next { right: -60px; }
+.hi-slide .hi-next::before { content: '>'; }
+
+.hi-slide ul
+{ 
+  list-style: none; 
+  position: absolute;
+  width: 100vw; 
+  height: 50vh; 
+  margin-top: 40%;
+  padding-right: 30vw;
+  margin-left: 10vw;
+  padding-top: 50%;
+
+}
+
+
+.hi-slide ul  li {
+  overflow: hidden; 
+  position: absolute; 
+  z-index: 0; 
+
+  width:125vw; 
+  height: 150vh; 
+  margin: 0; 
+  margin-bottom: 10px;
+  border: 2px solid #333; 
+  cursor: pointer;
+}
+
+.hi-slide > ul > li > video { width: 100%; height: 100%; background-position: center;}
+.bgvid{
+  background:#cc9999;
+}
+.bgvid .cardscon{
+  margin:0px;
+  border: none;
+}
+ 
+
+
+/*--------------------------parallax--------------------------------------------------------------------/*/
+.par{
+
+}
+
+.parallax
+{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0)   0%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("P:\web\img\par2.jpg");
+  min-height: 100vh;
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  letter-spacing: 0.3em;
+  font-size: 1.5em;
+  text-align: center;
+  position:relative;
+}
+.parallax2 
+{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0)   0%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("P:\web\img\par1.jpg");
+  min-height: 100vh;
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.frontpage_text 
+{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text
+{
+  color: black;
+  font-family:'Nunito Sans';
+  width: 500px;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+  text-align: center;
+}
+
+#about
+{
+  background-color: #cc9999;
+  box-sizing: border-box;
+  height: 100vh;
+  background-attachment:scroll;
+  background-size: cover;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about{
+  border-radius: 100% 
+
+}
+
+::selection{
+  background:#ffffff;
+}
+
+ 
+
+/*--------------------------------------------------------top stories------------------------------------------*/
+.topss{
+  background-color:#EBD6CF;
+}
+.row{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: start;
+  min-height: 50vh; 
+  margin: 10px 10vw;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+}
+.tops{
+  border-style: box-style;
+  border-color: #fff;
+}
+.tops .card-body{
+  padding: 8px;
+  background-color: #060c21;
+  color:white;
+  border-style: round;
+  text-align: center;
+  box-shadow:-2px 2px 10px #6DFDF2,-5px -5px 10px #060c21,5px 5px 10px #060c21,2px -2px 10px #B59BF4;
+}
+.tops .card-text{
+  padding-top:12%;
+  padding-bottom:4%;
+}/*-------------------------------------------------query-------------------------------------------------------------------------------*/
+
+.form{
+  position: relative;
+  top: 50%;
+  background-image:url("P:\web\img\query.jpg");
+  background-color: #cc9999;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.formcon{
+  max-width: 50vw;
+  margin:0 auto;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 0 0 10px;
+}
+.formcon:hover{
+  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  transition: smooth;
+  
+}
+.input{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+.input,.msg{
+  width: 48%;
+}
+.input .inputitem,.msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color:#c5ecfd;
+  width: 100%;
+}
+.msg textarea{
+  height: 325px;
+}
+::-webkit-input-placeholder{
+  color:#c5ecfd;
+}
+::-moz-input-placeholder{
+  color:#c5ecfd;
+}
+::-ms-input-placeholder{
+  color:#c5ecfd;
+}
+.btn1{
+  text-transform: uppercase;
+}
+@media screen and (max-width: 900px){
+  .formcon{
+    flex-direction: column;
+  }
+}
+/*------------------------------------------------------contacts-------------------------------------------*/
+.contacts1{
+  position:relative;
+  padding: 30px;
+  width: 100vw;
+  margin-bottom: 25px;
+}
+h3{
+  padding: 10px;
+}
+
+.contacts1 ul{
+  background: #cc9999;
+  color:#262626;
+  position: absolute;
+  padding-left: 37vw;
+}
+
+
+/*-------------------------------------*/
+.contacts{
+  position:relative;
+  margin-top: 50px;
+}
+ul{
+  position:absolute;
+  display: flex;
+  transform: translate(-50%,-50%);
+  top: 30px;
+  left: 50vw;
+}
+ul li{
+  list-style: none;
+}
+ul li a{
+  display: block;
+  position: relative;
+  height: 50px;
+  width:50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #262626;
+  margin:0 10px;
+  transition:.5s;
+}
+ul li a span{
+  position: absolute;
+  transition:transform.5s;
+}
+ul li a span:nth-child(1),
+ul li a span:nth-child(3){
+  width: 100%
+  height:1px;
+  background: #262626;
+}
+ul li a span:nth-child(1){
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+ul li a:hover span:nth-child(1){
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+ul li a span:nth-child(3){
+  bottom:0;
+  left: 0;
+  transform-origin: left;
+}
+ul li a:hover span:nth-child(3){
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform.5s;
+}
+ul li a span:nth-child(2),
+ul li a span:nth-child(4){
+  width: 1px;
+  height:100%;
+  background: #262626;
+}
+ul li a span:nth-child(2){
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+ul li a:hover span:nth-child(2){
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform.5s;
+}
+
+ul li a span:nth-child(4){
+  top: 0;
+  right: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+ul li a:hover span:nth-child(4){
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform.5s;
+}
