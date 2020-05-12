@@ -11,7 +11,6 @@
 	<!-- CSS Stylesheets -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="P:\web\styles.css">
-	<script  src="server.js" type="text/javascript"></script>
 	<!-- Font Awesome -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -20,11 +19,15 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-----jquery-------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+	<script  src="server.js" type="text/javascript"></script>
 </head>
 
 <body>
 	<!---------------------------------------------------------------navbar--------------------------------->
-	<nav class="navbar navbar-expand-lg navbar-light sticky-top navi  ">
+		<nav class="navbar navbar-expand-lg navbar-light sticky-top navi  ">
 			<a class="navbar-brand" href="#"><img  class="logo" src="P:\web\img\logo.png"></a>
 			<a class="navbar-brand" href="#">Resfeber Pillz</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +38,7 @@
 				<ul class="navbar-nav ">
 					<li class="nav-item dropdown">
 						<a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-							<button type="button" class="btn btn-outline-secondary">Had Beens</button>
+							<button type="button" class="btn btn-outline-warning">Had Beens</button>
 						</a>
 						<div class="dropdown-menu">
 							<h6 class="dropdown-header">Vacay? What kind?</h6>
@@ -46,10 +49,10 @@
 						</div>
 					</li>
 					<li class="nav-item ">
-						<a class="nav-link" href="#"><button type="button" class="btn btn-outline-secondary">Ongoings</button></a>
+						<a class="nav-link" href="#"><button type="button" class="btn btn-outline-warning">Ongoings</button></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"><button type="button" class="btn btn-outline-secondary">Suggest Places</button></a>
+						<a class="nav-link" href="#"><button type="button" class="btn btn-outline-warning">Suggest Places</button></a>
 					</li>
 				</ul>
 			</div>
@@ -58,7 +61,7 @@
 		<img  class="over" src="https://fontmeme.com/permalink/200307/156fbc00168c30d13e8615d822221489.png">
 <!-----------------sidebar----------------------------------------------------------------------->
 	<section class="sidebar">
-		<div class="dropdown-menu">
+		<div class="dropdown-menu" id="side-barDropdown">
 			<h6 class="side-header">sometips</h6>
 			<a class="dropdown-item" href="#">Hills</a>
 			<a class="dropdown-item" href="#">Cities</a>
@@ -67,18 +70,13 @@
 		</div>
 		<div>
 			<span>
-				<button class="bttn" type="button"><a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"><i class="fas fa-comment"></i></button>
+				<button class="bttn btn-group dropleft" type="button"><a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"><i class="fas fa-comment"></i></button>
 			</span>
 		</div>
 	</section>
 	<!-----------------------------------------------------carousel------------------------------------------------------------------->
 	<section class="carousel">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="3000">
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active ">
 					<img class="d-block w-100" src="P:\web\img\car1.jpg" alt="First slide">
@@ -98,7 +96,7 @@
 					<img class="d-block w-100" src="P:\web\img\car3.jpg" alt="Third slide">
 					<div class="carousel-caption  d-sm-block">
 						<h5>Kheerganga</h5>
-						<p>On the summit of the Unexplored Parvati valley</p>
+						<p>On the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valleyOn the summit of the Unexplored Parvati valley</p>
 					</div>
 				</div>
 			</div>
@@ -112,7 +110,7 @@
 			</a>
 		</div>
 	</section>
-	<!------------------------------------------------------cards---------------------------------------------->
+	<!-----------------------------------------------------vid-cards---------------------------------------------->
 	<section class="bgvid">
 		<div class="card-deck cards slide hi-slide">
 			<div class="hi-prev "></div>
@@ -122,14 +120,14 @@
 					<div class="card  cardscon">
 						<div>
 							<video class="vid" autoplay controls>
-								<source src="P:\web\img\vid.mp4" type="video\mp4">
+								<source src="https://player.vimeo.com/external/384997855.sd.mp4?s=2c06e2cda61273857002094315a85d2a34bdcf8b&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
 							</video>
 						</div>
 						<div class="card-body">
-							<h5 class="card-title">place</h5>
-							<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+							<h5 class="card-title">When you aint sure where to head for your next vacation.Dont forget to pack your SWIMSUIT</h5>
+							<a href="#" ><button class="btn btn-outline-warning">Read the Whole Story</button></a>
 							<div class="card-footer">
-								<small class="text-muted">Took near Bhagsu Fall</small>
+								<small class="text-muted">A not so conventional GOA TRIP</small>
 							</div>
 						</div>
 					</div>
@@ -143,7 +141,7 @@
 						</div>			
 						<div class="card-body">
 							<h5 class="card-title">Card title</h5>
-							<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+							<a href="#"><button class="btn btn-outline-warning">Read the Whole Story</button></a>
 							<div class="card-footer">
 								<small class="text-muted">Last updated 3 mins ago</small>
 							</div>
@@ -159,7 +157,7 @@
 						</div>									
 						<div class="card-body">
 							<h5 class="card-title">palce</h5>
-							<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+							<a href="#"><button class="btn btn-outline-warning">Read the Whole Story</button></a>
 							<div class="card-footer">
 								<small class="text-muted">Last updated 3 mins ago</small>
 							</div>
@@ -175,7 +173,7 @@
 						</div>			
 						<div class="card-body">
 							<h5 class="card-title">Card title</h5>
-							<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+							<a href="#"><button class="btn btn-outline-warning">Read the Whole Story</button></a>
 							<div class="card-footer">
 								<small class="text-muted">Last updated 3 mins ago</small>
 							</div>
@@ -191,7 +189,7 @@
 						</div>									
 						<div class="card-body">
 							<h5 class="card-title">palce</h5>
-							<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+							<a href="#"><button class="btn btn-outline-warning">Read the Whole Story</button></a>
 							<div class="card-footer">
 								<small class="text-muted">Last updated 3 mins ago</small>
 							</div>
@@ -207,7 +205,7 @@
 						</div>									
 						<div class="card-body">
 							<h5 class="card-title">palce</h5>
-							<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+							<a href="#"><button class="btn btn-outline-warning">Read the Whole Story</button></a>
 							<div class="card-footer">
 								<small class="text-muted">Last updated 3 mins ago</small>
 							</div>
@@ -223,7 +221,7 @@
 						</div>									
 						<div class="card-body">
 							<h5 class="card-title">palce</h5>
-							<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+							<a href="#"><button class="btn btn-outline-warning">Read the Whole Story</button></a>
 							<div class="card-footer">
 								<small class="text-muted">Last updated 3 mins ago</small>
 							</div>
@@ -236,13 +234,13 @@
 
 	<!----------------------------------------------------------------PARALLAX------------------------------------>
 	<section class="par">
-		<section class="parallax">
+		<section class="parallax1" >
 			<div class="frontpage_text">
 				<h1>Resfeber Pillz</h1>
 				<p>Your Budget Trip Planner</p>
 			</div>
 		</section>
-		<!----------->
+		<!----------------------------------------------------------->
 		<section id="about">
 			<div class="text">
 				<h1><em>Resfeber Pillz</em></h1>
@@ -250,46 +248,33 @@
 				<p>Lorem ipsum dolor sit amet, sed cras quis, felis nulla proin quisque asperiores officia, ipsum libero praesent aliquet, quis congue eget sem varius. Nibh semper metus pellentesque interdum amet, vel nulla nobis amet porttitor, et sit. Elementum suscipit pellentesque a, odio habitant elit nulla at diam. Ut justo quisque, wisi praesent aliquam, est accumsan laborum ut est, velit tortor laoreet, amet metus.</p>
 
 			</div>
+			<div class="contacts1">
+				<ul class="col">
+					<li>
+						<a href="https://www.instagram.com/heigh__ho/" title="Akshat">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<i class="fab fa-instagram"></i>
+						</a>
+						<h3><em>Akshat Mishra</em></h3>
+					</li>
+				</ul>
+			</div>
 		</section>
-		<div class="contacts1">
-			<ul class="col">
-				<li>
-					<a href="" title="Akshat">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<i class="fab fa-instagram"></i>
-					</a>
-					<h3><em>-Akshat</em></h3>
-				</li>
-				<li>
-					<a href="" title="Rakshit">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<i class="fab fa-instagram"></i>
-					</a>
-					<h3><em>-Rakshit</em></h3>					
-				</li>
-				<li>
-					<a href="" title="Vipul" >
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<i class="fab fa-instagram"></i>
-					</a>
-					<h3><em>-Vipul</em></h3>
-				</li>
-			</ul>
-		</section>
+
 		<!-------------------------------------------------------------->
-		<section class="parallax">
+		<section class="parallax2">
+			<div class="frontpage_text">
+				<h1>SO WHAT'S DIFFERENT?!</h1>
+				<p>The budget would be the last thing to worry about when you choose to travel with us.First things first we aint a travel company, we are a travel community.We "LOVE TO TRAVEL" and yoou can really explore some HIDDEN HIGHLY UNDERRATED PLACES.
+				And heyy!! We know what you are thinking ...another travel community.Actually NO! .WE WONT TIE YOU IN OUR SCHEDULES...WE WILL JUST PASS ON OUR EXPERTISE...YOU ARE FREE TO DECIDE HOW YOUR TRIPS SHOULD GO.</p>
+				<h3>WE PLAN AN ITINERARY THAT YOU WANT</h3>
+			</div>
 
 		</section>
-	</div>
+	</section>
 
 
 	<!----------------------------------------------------------------------topstories-------------------------------->
@@ -309,7 +294,7 @@
 						Video: 54 total hours
 						Certificates
 					Get Udemy certificate by completing entire course</p>
-					<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+					<a href="#" class="btn btn-warning">Read the Whole Story</a>
 				</div>
 			</div>
 
@@ -327,7 +312,7 @@
 						Video: 54 total hours
 						Certificates
 					Get Udemy certificate by completing entire course</p>
-					<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+					<a href="#" class="btn btn-warning">Read the Whole Story</a>
 				</div>
 			</div>
 		</div>
@@ -346,7 +331,7 @@
 						Video: 54 total hours
 						Certificates
 					Get Udemy certificate by completing entire course</p>
-					<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+					<a href="#" class="btn btn-warning">Read the Whole Story</a>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 tops">
@@ -363,7 +348,7 @@
 						Video: 54 total hours
 						Certificates
 					Get Udemy certificate by completing entire course</p>
-					<a href="#" class="btn btn-secondary">Read the Whole Story</a>
+					<a href="#" class="btn btn-warning">Read the Whole Story</a>
 				</div>
 			</div>
 		</div>
@@ -393,7 +378,7 @@
 				</div>
 				<div class="msg">
 					<textarea placeholder="Special Inclusions if any?!"></textarea>
-					<div class="btn btn-outline-secondary btn-sm btn1">Send</div>
+					<div class="btn btn-outline-warning btn-sm btn1">Send</div>
 				</div>
 			</div>
 
@@ -403,7 +388,7 @@
 	<div class="contacts">
 		<ul>
 			<li>
-				<a href="" title=" Follow us on instagram">
+				<a href="https://www.instagram.com/resfeber_pillz_/" title=" Follow us on instagram">
 					<span></span>
 					<span></span>
 					<span></span>

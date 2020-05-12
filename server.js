@@ -1,5 +1,18 @@
-const express= require("express");
-const bodyParser= require ("body-parser");
+//jscript esversion6
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 0) {
+	    $(".navbar").css("background-color" , "#115173");
+	  }
+
+	  else{
+		  $(".navbar").css("background-color" , "transparent");  	
+	  }
+  })
+});
+const express=require("express");
+const bodyParser=require ("body-parser");
 const app=express();
 
 app.use(bodyParser.urlencoded({extended:true}));
